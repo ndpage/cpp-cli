@@ -3,6 +3,8 @@ BUILD = ./build
 SRC = ./src
 OBJDIR = $(BUILD)/obj
 IDIR = ./include
+TARGET = main
+
 
 main: $(OBJDIR)/main.o
 	$(CC) $(OBJDIR)/main.o -o $(BUILD)/main
@@ -19,3 +21,6 @@ init:
 	mkdir $(OBJDIR)
 	mkdir $(SRC)
 	mkdir $(IDIR)
+
+run:
+	$(BUILD)/$(TARGET)
